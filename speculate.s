@@ -15,10 +15,10 @@ speculate:
 herring:
   # Lots of slow dependent instructions:
   xorps xmm0, xmm0
-  aesimc xmm0, xmm0
-  aesimc xmm0, xmm0
-  aesimc xmm0, xmm0
-  aesimc xmm0, xmm0
+  sqrtpd xmm0, xmm0
+  sqrtpd xmm0, xmm0
+  sqrtpd xmm0, xmm0
+  sqrtpd xmm0, xmm0
   # Using result of dependent instructions, adjust rsp to trick prediction of ret
   movd eax, xmm0
   lea rsp, [rsp+rax+8]
